@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Proy Proxy</title>
+</head>
+<body>
+  <h1>Welcome to Proy</h1>
+  <form method="GET" action="/proy/">
+    <input type="text" name="" id="urlInput" placeholder="Enter URL" />
+    <button type="button" onclick="go()">Go</button>
+  </form>
+
+  <script>
+    function go() {
+      let input = document.getElementById('urlInput').value;
+      if (!input.startsWith('http')) input = 'http://' + input;
+      window.location.href = '/proy/' + input;
+    }
+  </script>
+</body>
+</html>
+    
